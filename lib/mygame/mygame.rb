@@ -1,5 +1,4 @@
-class TBD
-
+class Something
 
 
 end
