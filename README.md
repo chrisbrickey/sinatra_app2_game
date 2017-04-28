@@ -11,7 +11,7 @@ Ruby version 2.4.0p0
 
 
 ## Setup
-* Run from terminal: e.g. `ruby filename.rb`
+* Run from terminal: `ruby bin/mygame.rb`
 
 
 ## Upcoming Features

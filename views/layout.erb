@@ -1,0 +1,19 @@
+<!-- THIS IS THE WRAPPER FOR ALL OTHER TEMPLATES  -->
+<!-- this file automates the 'printing' of the html that you see at the top and bottom of all our view files...
+...so we don't have to rewrite it in all the files -->
+<!-- this file takes the common HTML at the top and bottom of every other template and puts it into one <fieldset> -->
+
+</fieldset>
+
+
+<html>
+  <head>
+    <title>My Game</title>
+  </head>
+
+  <body>
+
+    <%= yield %>
+
+  </body>
+</html>

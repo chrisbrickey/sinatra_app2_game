@@ -1,0 +1,16 @@
+<!-- This looks like abbreviated html because it goes into the 'wrapper' (layout.erb) -->
+
+
+  <h1>Fill Out This Form</h1>
+
+  <!-- below line (inside the form tag) tells the computer where to deliver this form...to the post '/hello' handler in mygame.rb -->
+  <form action="/hello/" method="POST">
+    <!-- "A Greeting:" and "Your Name:" are just text that you would put inside of any html tag< -->
+    <!-- two input tags tell the computer which type of input (text) and the parameters to use...When something is typed into the greeting field, it becomes the value for params[:greeting]</li> -->
+    A Greeting: <input type="text" name="greeting">
+    <br />
+    <!-- when something is typed in the below field, it becomes the value to params[:name] -->
+    Your Name: <input type="text" name="name">
+    <br />
+    <input type="submit">
+  </form>
