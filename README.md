@@ -8,6 +8,8 @@ Ruby version 2.4.0p0
 
 ## Dependencies
 * gem install sinatra
+* gem install rack-test
+
 
 
 ## Setup
