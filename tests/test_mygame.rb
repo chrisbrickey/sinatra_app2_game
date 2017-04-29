@@ -11,19 +11,22 @@ class MyGameTest < Test::Unit::TestCase
 
   def test_my_default
     get '/'
-    assert_equal 'Hello world', last_response.body
+    #need to change below to test that we are redirected to /game
+    # assert_equal 'Hello world', last_response.body
   end
 
-  def test_hello_form
-    get '/hello/'
+  def test_get_game
+    get '/game'
     assert last_response.ok?
-    assert last_response.body.include?('A Greeting')
+    #need to change below to test that 'if room', we go to show_room.erb
+    # assert last_response.body.include?('A Greeting')
   end
 
-  def test_hello_form_post
-    post '/hello/', params={:name => 'Frank', :greeting => "Hi"}
+  def test_post_game
+    post '/game' #not sure what params should be - action?....,params={:name => 'Frank', :greeting => "Hi"}
     assert last_response.ok?
-    assert last_response.body.include?('I just wanted to say')
+    #need to change below to test that ....(see mygame.erb, post '/game' do...)
+    # assert last_response.body.include?('I just wanted to say')
   end
 
 
