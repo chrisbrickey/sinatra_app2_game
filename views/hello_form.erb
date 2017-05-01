@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Sample Web Form</title>
+  </head>
+
+  <body>
+
+    <h1>Fill Out this form</h1>
+
+    <!-- form tag tells us where to put the form (the post /hello/ handler on hello_app.rb)  -->
+    <form action="/hello/" method="POST">
+
+      <!-- 'A Greeting:' is just the text that will show; -->
+      <!-- input tag tells us which input fields we need (a text box = type) and the params to use -->
+      <!-- these are the variables that get passed as :locals to the index.erb file (via the hello_app.rb file) -->
+      A Greeting: <input type="text" name="greeting">
+      <br/>
+      Your Name: <input type="text" name="name">
+      <br/>
+      <!-- submit button -->
+      <input type="submit">
+
+    </form>
+
+  </body>
+
+</html>
