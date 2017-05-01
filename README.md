@@ -11,9 +11,9 @@ Ruby version 2.4.0p0
 * gem install rack-test
 
 
-
 ## Setup
 * Run from terminal: `ruby bin/hello_app.rb`
+* Local port set to 8080: `http://localhost:8080` or ` http://localhost:8080/hello/?greeting=Hi` or http://localhost:8080/hola.html
 
 
 ## Upcoming Features
