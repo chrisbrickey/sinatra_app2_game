@@ -14,6 +14,7 @@ Ruby version 2.4.0p0
 ## Setup
 * Run from terminal: `ruby bin/hello_app.rb`
 * Local port set to 8080: `http://localhost:8080` or ` http://localhost:8080/hello/?greeting=Hi` or http://localhost:8080/hola.html
+* Run tests from root folder: `rake test`
 
 
 ## Upcoming Features
