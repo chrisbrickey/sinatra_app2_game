@@ -1,6 +1,6 @@
 #this is testing the handlers from hello_app.rb
 
-require "./bin/hello_app.rb"
+require "./bin/game.rb"
 require "test/unit"
 require 'rack/test'
 
@@ -28,7 +28,7 @@ class HelloAppTest < Test::Unit::TestCase
   def test_hello_form_post
     post '/hello/', params={:name => 'Frank', :greeting => 'Hi'}
     assert last_response.ok?
-    assert last_response.body.include?('I just wanted to say') 
+    assert last_response.body.include?('I just wanted to say')
   end
 
 end #of class
