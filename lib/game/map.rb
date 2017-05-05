@@ -1,5 +1,3 @@
-#!!!I created the map.rb file from scratch. It might need to be renamed as game.rb (a file that was already in this directory) to make links work
-
 module Map
 
   class Room  #class Room is a copy/paste from ex47
