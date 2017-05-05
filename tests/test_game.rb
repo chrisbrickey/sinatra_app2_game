@@ -1,6 +1,6 @@
 #this is testing the handlers from hello_app.rb
 
-require "./bin/game.rb"
+require "../bin/game.rb"
 require "test/unit"
 require 'rack/test'
 
