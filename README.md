@@ -15,6 +15,7 @@ Ruby version 2.4.0p0
 * Run from terminal: `ruby bin/game.rb`
 * Local port set to 8080: `http://localhost:8080`
 * Run tests from root folder: `rake test`
+* If running tests directly from tests directory (e.g. `ruby test_map.rb`), toggle the require statement on the top line to the required format - see each test file for notes on which format to use. This must be done on the test files and on bin/game.rb
 
 
 ## Upcoming Features

@@ -1,8 +1,9 @@
-# added this file myself (does not have a counterpart in sinatra_app1)
 #first three methods were copy/pasted from ex47, remainder were copy/pasted from sinatra_original
 
-require "../lib/game/map.rb"
+# require "../lib/game/map.rb"  #this format required for running this file directly from tests directory
+require "./lib/game/map.rb" #this format required for running rake test from root directory
 require "test/unit"
+require 'rack/test'
 
 class TestMap < Test::Unit::TestCase
 

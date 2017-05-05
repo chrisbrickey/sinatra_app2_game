@@ -1,5 +1,6 @@
 require 'sinatra'
-require '../lib/game/map.rb'
+# require '../lib/game/map.rb' #this format required for running this file directly from tests directory
+require './lib/game/map.rb' #this format required for running rake test from root directory
 
 set :port, 8080
 set :static, true
@@ -15,7 +16,7 @@ set :session_secret, 'BADSECRET'
 #the first line of these blocks are called 'handlers'
 get '/' do #when browser asks for root URL (the index)
   session[:room] = 'START'
-  redirect to('/game')
+  redirect to('/game') #don't need index.erb because they will be redirected to show_room.erb
 end
 
 
@@ -30,7 +31,7 @@ get '/game' do #when browser asks for root/game
 
 end
 
-post 'game' do #when browser receives a form from root/game
+post '/game' do #when browser receives a form from root/game
   room = Map::load_room(session)
   action = params[:action]  #take 'action' from URL typed into browser
 

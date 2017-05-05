@@ -1,0 +1,29 @@
+<!-- This is an HTML template, other files dictate what get populated within this template -->
+
+<h1> <%= room.name %> </h1>
+
+<pre>
+<%= room.description %>
+</pre>
+
+<% if room.name == "death" || room.name == "The End" %>
+  <p><a href="/">Play Again?</a></p>
+<% else %>
+  <p>
+
+    <!-- form tag tells us where to put the form: on the post /game handler at game.rb)  -->
+  <form action="/game" method="POST">
+
+    <!-- input tag inserts input fields
+    type tells us the type of input (text)
+    name is the parameter to use (the variable that gets passed in as :locals) -->
+    - <input type="text" name="action">
+
+    <!-- submit button -->
+    <input type="SUBMIT">
+
+  </form>
+
+  </p>
+
+<% end %>
