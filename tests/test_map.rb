@@ -1,23 +1,21 @@
-#MAKE SURE THIS MATECHES PAGE 263!!
 # added this file myself (does not have a counterpart in sinatra_app1)
-#first three methods were copy/pasted from ex47
-#remainder were copy/pasted from sinatra_original
+#first three methods were copy/pasted from ex47, remainder were copy/pasted from sinatra_original
 
 require "../lib/game/map.rb"
 require "test/unit"
 
-class TestGame < Test::Unit::TestCase
+class TestMap < Test::Unit::TestCase
 
   def test_room()
-    gold = Room.new("GoldRoom", "This room has gold. There's a door to the north.")
-    assert_equal("GoldRoom", gold.name)
+    gold = Map::Room.new("GoldMap::Room", "This room has gold. There's a door to the north.")
+    assert_equal("GoldMap::Room", gold.name)
     assert_equal({}, gold.paths)
   end
 
   def test_room_paths()
-    center = Room.new("Center", "Test room in center.")
-    north = Room.new("North", "Test room in north.")
-    south= Room.new("South", "Test room in south.")
+    center = Map::Room.new("Center", "Test room in center.")
+    north = Map::Room.new("North", "Test room in north.")
+    south= Map::Room.new("South", "Test room in south.")
 
     center.add_paths({'north'=> north, 'south' => south})
     assert_equal(north, center.go('north'))
@@ -25,9 +23,9 @@ class TestGame < Test::Unit::TestCase
   end
 
   def test_map()
-    start = Room.new("Start", "You can go west and down a hole.")
-    west = Room.new("Trees", "There are trees here, you can go east.")
-    down = Room.new("Dungeon", "It's dark  down here, you can go up.")
+    start = Map::Room.new("Start", "You can go west and down a hole.")
+    west = Map::Room.new("Trees", "There are trees here, you can go east.")
+    down = Map::Room.new("Dungeon", "It's dark  down here, you can go up.")
 
     start.add_paths({'west' => west, 'down' => down})
     west.add_paths({'east' => start})
@@ -63,8 +61,6 @@ class TestGame < Test::Unit::TestCase
     Map::save_room(session, room)
     assert_equal(room, Map::LASER_WEAPON_ARMORY)
   end
-
-
 
 
 end #of class

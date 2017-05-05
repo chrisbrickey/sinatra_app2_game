@@ -1,30 +1,32 @@
 #!!!I created the map.rb file from scratch. It might need to be renamed as game.rb (a file that was already in this directory) to make links work
 
-class Room  #class Room is a copy/paste from ex47
 
-  def initialize(name, description)
-    @name = name
-    @description = description
-    @paths = {}
-  end
-
-  #making it easy to access the variables...
-  attr_reader :name
-  attr_reader :description
-  attr_reader :paths
-
-  def go(direction)
-    return @paths[direction]
-  end
-
-  def add_paths(paths)
-    @paths.update(paths)
-  end
-
-end#of Room class
 
 
 module Map
+
+  class Room  #class Room is a copy/paste from ex47
+
+    def initialize(name, description)
+      @name = name
+      @description = description
+      @paths = {}
+    end
+
+    #making it easy to access the variables...
+    attr_reader :name
+    attr_reader :description
+    attr_reader :paths
+
+    def go(direction)
+      return @paths[direction]
+    end
+
+    def add_paths(paths)
+      @paths.update(paths)
+    end
+
+  end#of Room class
 
   #everything below is a copy/paste of sinatra_original
   #CREATING NEW ROOMS
