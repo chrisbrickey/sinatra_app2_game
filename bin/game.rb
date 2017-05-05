@@ -12,7 +12,7 @@ end
 
 
 get '/hello/' do #when browser asks for root/hello/
-  erb :hello_form # call 'erb' method (show an .erb file) with one parameter (the file name: hello_form); these files are in the views folder
+  erb :game_form # call 'erb' method (show an .erb file) with one parameter (the file name: hello_form); these files are in the views folder
 end
 
 post '/hello/' do #when browser receives a form from root/hello/
